@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:online_learning_ui_kit/ui/views/login_view/login_viewmodel.dart';
+import 'package:online_learning_ui_kit/ui/views/search_view/search_viewmodel.dart';
 import 'package:provider/provider.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({Key? key}) : super(key: key);
+class SearchView extends StatelessWidget {
+  const SearchView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => LoginViewModel(),
+      create: (_) => SearchViewModel(),
       builder: (context, _) {
         return const _ViewContext();
       },
@@ -21,13 +21,6 @@ class _ViewContext extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(10),
-          child: const Text("Cansu"),
-        ),
-      ),
-    );
+    return Container();
   }
 }
