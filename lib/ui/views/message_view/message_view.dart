@@ -21,6 +21,9 @@ class _ViewContext extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+        child: const Center(
+      child: Text("Message"),
+    ));
   }
 }
