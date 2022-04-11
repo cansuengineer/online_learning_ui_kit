@@ -25,7 +25,12 @@ class _ViewContext extends StatelessWidget {
       body: Center(
         child: Container(
           padding: const EdgeInsets.all(10),
-          child: const Text("login View"),
+          child: Column(
+            children: [
+              const Text("login View"),
+              ElevatedButton(onPressed: () {}, child: const Text("Tıkla"))
+            ],
+          ),
         ),
       ),
     );
