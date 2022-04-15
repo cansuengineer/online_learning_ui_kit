@@ -18,11 +18,11 @@ class ColorPalette {
   // ignore: unused_element
   ColorPalette._();
 
-  ColorPalette.redThemePalette() {
+  ColorPalette.lightThemePalette() {
     color1 = const Color(0xff3D5CFF);
     color2 = const Color(0xffffebf0);
     color3 = const Color(0xFFeaeaff);
-    color4 = const Color(0xFFFFFFFF);
+    color4 = const Color(0xFFF4F3FD);
     color5 = const Color(0xffff6905);
     color6 = const Color(0xff1F1F39);
     color7 = const Color(0xFF858597);

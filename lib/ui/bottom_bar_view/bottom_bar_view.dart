@@ -1,6 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:online_learning_ui_kit/assets/light_theme.dart';
+import 'package:online_learning_ui_kit/assets/app_colors.dart';
 import 'package:online_learning_ui_kit/ui/bottom_bar_view/bottom_bar_viewmodel.dart';
 import 'package:online_learning_ui_kit/ui/views/account_view/account_view.dart';
 import 'package:online_learning_ui_kit/ui/views/course_view/course_view.dart';
@@ -30,10 +30,21 @@ class _ViewContext extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: ConvexAppBar(
-        backgroundColor: lightThemeData.primaryColor,
+        backgroundColor: ColorPalette.lightThemePalette().color9,
+        activeColor: ColorPalette.lightThemePalette().color1,
+        elevation: 3,
+        color: ColorPalette.lightThemePalette().color3,
+        style: TabStyle.fixedCircle,
+        height: 55,
         items: const [
-          TabItem(icon: Icons.home, title: "Home"),
-          TabItem(icon: Icons.book, title: "Course"),
+          TabItem(
+            icon: Icons.home,
+            title: "Home",
+          ),
+          TabItem(
+            icon: Icons.book,
+            title: "Course",
+          ),
           TabItem(icon: Icons.search, title: "Search"),
           TabItem(icon: Icons.message, title: "Message"),
           TabItem(icon: Icons.person, title: "Account")

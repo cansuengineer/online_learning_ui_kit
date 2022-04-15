@@ -15,4 +15,11 @@ final lightThemeData = ThemeData(
     800: Color(0xff516cff),
     900: Color(0xff3D5CFF)
   }),
+  backgroundColor: const Color(0xFFFFFFFF),
+  // bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+  // backgroundColor: Color(0xFFFFFFFF),
+  // // elevation: 1,
+
+  // selectedItemColor: Color(0xff3D5CFF),
+  // unselectedItemColor: Color(0xFFeaeaff))
 );
