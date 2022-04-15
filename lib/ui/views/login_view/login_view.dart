@@ -23,9 +23,16 @@ class _ViewContext extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(10),
-          child: const Text("Cansu"),
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: const Text("LoginView"),
+            ),
+            ElevatedButton(
+                onPressed: context.read<LoginViewModel>().onTap,
+                child: const Text("Tıkla"))
+          ],
         ),
       ),
     );
