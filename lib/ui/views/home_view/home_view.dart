@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:online_learning_ui_kit/app/app_defaults.dart';
 import 'package:online_learning_ui_kit/assets/app_colors.dart';
 import 'package:online_learning_ui_kit/assets/light_theme.dart';
 import 'package:online_learning_ui_kit/ui/views/home_view/home_viewmodel.dart';
+import 'package:online_learning_ui_kit/ui/widgets/box_container.dart';
 import 'package:provider/provider.dart';
 
 class HomeView extends StatelessWidget {
@@ -63,10 +65,10 @@ class _ComponentsWidget extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: Column(
         children: const [
-          Expanded(flex: 1, child: _RersonInfoWidget()),
-          Expanded(flex: 1, child: _CardWidget()),
-          Expanded(flex: 2, child: _HorizontalSliderWidget()),
-          Expanded(flex: 3, child: _ScrollListWidget()),
+          Expanded(flex: 2, child: _RersonInfoWidget()),
+          Expanded(flex: 2, child: _CardWidget()),
+          Expanded(flex: 3, child: _HorizontalSliderWidget()),
+          Expanded(flex: 5, child: _ScrollListWidget()),
         ],
       ),
     );
@@ -109,11 +111,9 @@ class _CardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return const BoxContainer(
+      width: 400,
       height: 40,
-      decoration: const BoxDecoration(
-        color: Colors.white,
-      ),
     );
   }
 }
@@ -123,7 +123,26 @@ class _HorizontalSliderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: const EdgeInsets.all(5),
+      child: ListView(scrollDirection: Axis.horizontal, children: const [
+        BoxContainer(
+          height: 100,
+          width: 250,
+          color: Color(0xffCEECFE),
+        ),
+        BoxContainer(
+          height: 100,
+          width: 250,
+          color: Color(0xffBFE4C6),
+        ),
+        BoxContainer(
+          height: 100,
+          width: 250,
+          color: Colors.amber,
+        ),
+      ]),
+    );
   }
 }
 
@@ -132,6 +151,20 @@ class _ScrollListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: const EdgeInsets.all(AppDefaults.kStandartContentPadding),
+      child: ListView(children: const [
+        BoxContainer(
+          height: 150,
+          width: 250,
+          color: Colors.white,
+        ),
+        BoxContainer(
+          height: 150,
+          width: 250,
+          color: Color(0xffEFE0FF),
+        )
+      ]),
+    );
   }
 }
