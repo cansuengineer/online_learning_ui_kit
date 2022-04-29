@@ -67,7 +67,7 @@ class _ComponentsWidget extends StatelessWidget {
         children: const [
           Expanded(flex: 2, child: _RersonInfoWidget()),
           Expanded(flex: 2, child: _CardWidget()),
-          Expanded(flex: 3, child: _HorizontalSliderWidget()),
+          Expanded(flex: 4, child: _HorizontalSliderWidget()),
           Expanded(flex: 5, child: _ScrollListWidget()),
         ],
       ),
@@ -95,9 +95,30 @@ class _RersonInfoWidget extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.bottomLeft,
             child: Column(
-              children: const [Text("data"), Text("data")],
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                    margin: const EdgeInsets.only(
+                        top: AppDefaults.kStandartContentMargin),
+                    padding: const EdgeInsets.all(
+                        AppDefaults.kStandartContentPadding),
+                    child: const Text(
+                      "Hi,  Kristin",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                      ),
+                    )),
+                Container(
+                    padding: const EdgeInsets.all(
+                        AppDefaults.kStandartContentPadding),
+                    child: const Text(
+                      "Lets's strart learning",
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ))
+              ],
             ),
           )
         ],
@@ -124,21 +145,21 @@ class _HorizontalSliderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(5),
-      child: ListView(scrollDirection: Axis.horizontal, children: const [
+      padding: const EdgeInsets.all(AppDefaults.kStandartContentPadding),
+      child: ListView(scrollDirection: Axis.horizontal, children: [
         BoxContainer(
-          height: 100,
-          width: 250,
-          color: Color(0xffCEECFE),
+          width: MediaQuery.of(context).size.width * 0.7,
+          padding: const EdgeInsets.all(AppDefaults.kStandartContentPadding),
+          color: const Color(0xffCEECFE),
         ),
         BoxContainer(
-          height: 100,
-          width: 250,
-          color: Color(0xffBFE4C6),
+          width: MediaQuery.of(context).size.width * 0.7,
+          padding: const EdgeInsets.all(AppDefaults.kStandartContentPadding),
+          color: const Color(0xffBFE4C6),
         ),
         BoxContainer(
-          height: 100,
-          width: 250,
+          width: MediaQuery.of(context).size.width * 0.7,
+          padding: const EdgeInsets.all(AppDefaults.kStandartContentPadding),
           color: Colors.amber,
         ),
       ]),
@@ -153,16 +174,16 @@ class _ScrollListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(AppDefaults.kStandartContentPadding),
-      child: ListView(children: const [
+      child: ListView(children: [
         BoxContainer(
-          height: 150,
-          width: 250,
+          height: MediaQuery.of(context).size.height * 0.3,
+          padding: const EdgeInsets.all(AppDefaults.kStandartContentPadding),
           color: Colors.white,
         ),
         BoxContainer(
-          height: 150,
-          width: 250,
-          color: Color(0xffEFE0FF),
+          height: MediaQuery.of(context).size.height * 0.3,
+          padding: const EdgeInsets.all(AppDefaults.kStandartContentPadding),
+          color: const Color(0xffEFE0FF),
         )
       ]),
     );
